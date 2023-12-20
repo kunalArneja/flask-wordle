@@ -100,8 +100,5 @@ def help(known_positions, included_characters, excluded_characters, excluded_pos
 
     # filter words
     matches, l = filter_possible_words(known_positions, included_characters, excluded_characters, excluded_positions, possible_words)
-
-    # output to user
-    print(f"Show {len(matches)} possible words? [y/n] ", end='')
-    if input().strip().lower() in ('yes', 'y'):
-        print(*l, sep="\n")
+    output = ''.join(matches)
+    return output
