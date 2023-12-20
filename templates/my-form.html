@@ -1,4 +1,12 @@
 <form method="POST">
+    <p>
+        Input format: known_positions included_characters excluded_characters excluded_positions<br>
+        Known_positions: Characters with known positions as a string of length 5 with - as placeholders such as --xy-.<br>
+        Included_characters: Characters that are included in the word but in unkown location in the form xyz. Use - if there are none.<br>
+        Excluded_characters: Characters that are excluded in the word in the form xyz. Use - if there are none.<br>
+        Excluded_positions: Characters with known positinois where they do not exist with , seperating each position such as ,x,y,,xy<br>
+        Sample input: ----- cre an c,er,r,c,e <br>
+    </p>
     <input name="text">
     <input type="submit">
     <!-- output anchor -->

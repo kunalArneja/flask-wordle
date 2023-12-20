@@ -89,5 +89,5 @@ def help(known_positions, included_characters, excluded_characters, excluded_pos
 
     # filter words
     matches, l = filter_possible_words(known_positions, included_characters, excluded_characters, excluded_positions, possible_words)
-    output = ''.join(matches)
+    output = ' '.join(matches)
     return output
