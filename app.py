@@ -17,11 +17,11 @@ def my_form_post():
     text = request.form['text']
     processed_text = text.upper()
     params = text.split(" ")
-    if len(params < 4):
+    if len(params) < 4:
         processed_text = "INVALID INPUT"
-    if len(params == 4):
+    if len(params) == 4:
         processed_text =help(params[0], params[1], params[2], params[3], None)
-    if len(params > 4):
+    if len(params) > 4:
         processed_text =help(params[0], params[1], params[2], params[3], params[4])
 
     response_text = f'<p>{processed_text}</p>'
