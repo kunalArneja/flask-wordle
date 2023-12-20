@@ -78,18 +78,7 @@ def help(known_positions, included_characters, excluded_characters, excluded_pos
         print("failed to load possible words")
         exit(1)
 
-    # command line parsing
-    if len(sys.argv) < 4:
-        print("usage: helper.py known_positions included_characters excluded_characters")
-        exit(1)
-
-    known_positions = sys.argv[1]
-    included_characters = sys.argv[2]
-    excluded_characters = sys.argv[3]
-    excluded_positions = None
-
-    if len(sys.argv) > 4:
-        excluded_positions = sys.argv[4]
+    if excluded_positions != None:
         if excluded_positions.count(",") != 4:
             print(f"arg excluded_positions ({excluded_positions}) must be of the form x,y,x,, with exactly 4 ,")
             exit(1)
